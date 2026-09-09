@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Background wallpaper - full screen -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_upside_down"
+        android:alpha="0.95"/>
+
+    <!-- Very light dark overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"/>
+
+    <!-- Content pinned to bottom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="140dp"
+        android:paddingHorizontal="32dp">
+
+        <!-- Curiosity door quote -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&quot;Why are you keeping this curiosity door locked?&quot;"
+            android:textColor="#CCCCCC"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:shadowColor="#000000"
+            android:shadowRadius="8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Semi-transparent ENTER THE VOID button -->
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="220dp"
+            android:layout_height="52dp"
+            android:text="ENTER THE VOID"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:letterSpacing="0.2"
+            android:alpha="0.55"
+            android:background="@drawable/btn_red_border"/>
+
+    </LinearLayout>
+
+    <!-- Fairy lights pinned to bottom -->
+    <com.example.strangerthings.FairyLightsView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"/>
+
+</FrameLayout>
